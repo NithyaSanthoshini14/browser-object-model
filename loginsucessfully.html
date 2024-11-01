@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    email<input type="email" name="mail" id="">
+    password<input type="password" name="pass" id="">
+    <button onclick=verify()>login</button>
+    <script>
+        function verify(){
+            let a=document.getElementsByName("mail")[0].value
+        let b=document.getElementsByName("pass")[0].value
+        let regform=JSON.parse(localStorage.getItem("data"))
+         console.log(regform)
+            if(a==regform.email && b==regform.password){
+                alert("login successfully")
+            }else{
+                alert("invalid login")
+                
+            }
+            
+
+    }
+    </script>
+    
+</body>
+</html>

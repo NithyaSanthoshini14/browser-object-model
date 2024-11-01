@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    email<input type="email" name="email" id="">
+    username<input type="text" name="name" id="">
+    password<input type="password" name="pass" id="">
+    <button type="submit">submit</button>
+    <script>
+        let useremail=document.getElementsByName("email")[0]
+        let username=document.getElementsByName("name")[0]
+        let pass2=document.getElementsByName("pass")[0]
+       
+        let btn=document.getElementsByTagName("button")[0]
+        let details={}
+        
+        btn.addEventListener("click",(e)=>{
+            e.preventDefault()
+            
+            details.email=useremail.value
+            details.namee=username.value
+            details.password=pass2.value
+            console.log(details)
+            let str=JSON.stringify(details)
+            localStorage.setItem("data",str)
+
+
+            
+
+
+
+        })
+        </script>
+
+
+</body>
+</html>
